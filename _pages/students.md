@@ -10,8 +10,32 @@ nav_order: 1
 ### Ph.D. Students
 
 ##### Ziyu Liu (Ph.D. Candidate Spring 2025 -)
-<!-- MS @ NEU\
+<!-- ![Image Description](/assets/img/Ziyu-2.jpg){: style="width: 200px; height: 300px;" }
+MS @ NEU\
 BS @ Penn State -->
+
+<div style="display: flex; align-items: flex-start;">
+  <div style="position: relative; width: 200px;">
+    <img src="/assets/img/Ziyu-2.jpg" alt="Ziyu Liu" style="width: 100%; border: 1px solid #ccc;">
+    <div style="position: absolute; top: 1px; right: 1px; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px; font-size: 14px;">
+      MS @ NEU
+    </div>
+    <div style="position: absolute; top: 1px; left: 1px; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px; font-size: 14px;">
+      BS @ Penn State
+    </div>
+  </div>
+
+
+<!-- <div style="text-align: left; position: relative; width: 200px; margin: auto;">
+  <img src="/assets/img/Ziyu-2.jpg" alt="Ziyu Liu" style="width: 100%; border: 1px solid #ccc;">
+  <div style="position: absolute; bottom: 20px; left: 20px; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px; font-size: 14px;">
+    BS @ Penn State
+  </div>
+  <div style="position: absolute; top: 50%; right: 20px; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px; font-size: 14px;">
+    MS @ NEU
+  </div>
+</div> -->
+
 
 <!-- ### MS Students
 

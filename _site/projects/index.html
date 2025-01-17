@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Research | Yukui Luo</title>
+    <title>projects | Yukui Luo</title>
     <meta name="author" content="Yukui  Luo">
-    <meta name="description" content="My research path began with hardware security primitives and progressed to the system level. FPGA Virtualization is a key aspect of my Ph.D. research. My current research direction will focus more on the contribution of hardware systems to security and privacy. I will continue to explore truly valuable cloud computing systems from hardware, system, and software levels.">
+    <meta name="description" content="A growing collection of your cool projects.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -83,8 +83,8 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/Publications/">Publications</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/projects/">Research<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/researchs/">Research</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/Teaching/">Teaching</a>
@@ -118,349 +118,167 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Research</h1>
-    <p class="post-description">My research path began with hardware security primitives and progressed to the system level. FPGA Virtualization is a key aspect of my Ph.D. research. My current research direction will focus more on the contribution of hardware systems to security and privacy. I will continue to explore truly valuable cloud computing systems from hardware, system, and software levels.</p>
+    <h1 class="post-title">projects</h1>
+    <p class="post-description">A growing collection of your cool projects.</p>
   </header>
 
   <article>
-    <!-- <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conway's Game of Life</title>
-<style>
-    #gameCanvas {
-        width: 100%;
-        height: 100%; /* height is 1/4 of the viewport width */
-        border: 0px solid black;
-    }
-    body, html {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-</style>
+    <!-- pages/projects.md -->
+<div class="projects">
+  <!-- Display categorized projects -->
+  <h2 class="category">work</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/1_project/">
+      <div class="card hoverable">
+<figure>
 
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/12-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/12-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/12-1400.webp"></source>
+    
 
-<body>
-<canvas id="gameCanvas"></canvas>
-<script>
-    const canvas = document.getElementById('gameCanvas');
-    const ctx = canvas.getContext('2d');
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/12.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
 
-    // Set the canvas dimensions
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetWidth / 8;
-    let running = false; // State to control the evolution
-    const factor = 5
-    // Grid size based on canvas size
-    const cols = Math.floor(canvas.width / factor);
-    const rows = Math.floor(canvas.height / factor);
-    let grid = createGrid(cols, rows);
+</figure>
 
-    function createGrid(cols, rows) {
-        return new Array(cols).fill(null)
-            .map(() => new Array(rows).fill(0));
-    }
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 1</h2>
+          <p class="card-text">a project with a background image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/2_project/">
+      <div class="card hoverable">
+<figure>
 
-    function render() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                const cell = grid[col][row];
-                ctx.beginPath();
-                ctx.rect(col * factor, row * factor, factor, factor);
-                ctx.fillStyle = cell ? 'black' : 'white';
-                ctx.fill();
-                ctx.stroke();
-            }
-        }
-    }
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
+    
 
-    canvas.addEventListener('click', () => {
-        if (!running) {
-            randomFill();
-            running = true;
-            requestAnimationFrame(update);
-        } else {
-            running = false;
-            grid = createGrid(cols, rows);
-            randomFill();
-            running = true;
-            requestAnimationFrame(update);
-        }
-    });
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/3.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
 
-    function randomFill() {
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                grid[col][row] = Math.floor(Math.random() * 2);
-            }
-        }
-        render();
-    }
+</figure>
 
-    function nextGen() {
-        let newGrid = createGrid(cols, rows);
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                const cell = grid[col][row];
-                let numNeighbours = 0;
-                for (let i = -1; i < 2; i++) {
-                    for (let j = -1; j < 2; j++) {
-                        if (i === 0 && j === 0) continue;
-                        const x_cell = (col + i + cols) % cols;
-                        const y_cell = (row + j + rows) % rows;
-                        numNeighbours += grid[x_cell][y_cell];
-                    }
-                }
-                if (cell === 1 && numNeighbours < 2 || numNeighbours > 3) newGrid[col][row] = 0;
-                else if (cell === 0 && numNeighbours === 3) newGrid[col][row] = 1;
-                else newGrid[col][row] = cell;
-            }
-        }
-        grid = newGrid;
-    }
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 2</h2>
+          <p class="card-text">a project with a background image and giscus comments</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="https://unsplash.com" rel="external nofollow noopener" target="_blank">
+      <div class="card hoverable">
+<figure>
 
-    function update() {
-        nextGen();
-        render();
-        if (running) {
-            requestAnimationFrame(update);
-        }
-    }
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/7-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/7-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/7-1400.webp"></source>
+    
 
-    // Resize the canvas when the window size changes
-    window.addEventListener('resize', () => {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetWidth / 4;
-        render();
-    });
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/7.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
 
-    // Initialize with a random soup
-    randomFill();
-</script>
-</body> -->
-<hr>
+</figure>
 
-<ol>
-  <li><a href="#FPGA_Vir">FPGA Virtualization System</a></li>
-  <li><a href="#Hw_sec">Hardware Security</a></li>
-  <li><a href="#ai">Trustworthy AI Acceleration and Optimization</a></li>
-</ol>
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 3</h2>
+          <p class="card-text">a project that redirects to another website</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+  </div>
+  <h2 class="category">fun</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/5_project/">
+      <div class="card hoverable">
+<figure>
 
-<h2 id="fpga-virtualization-system-hardware-oriented-threats-and-mitigations-">FPGA Virtualization System: Hardware-Oriented Threats and Mitigations <a name="FPGA_Vir"></a>
-</h2>
-<p>Technologies for cloud virtualization are extensively utilized in public cloud services. Currently, there is significant focus in both industry and academic research on virtualization technologies involving FPGA-based cloud instances.</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
+    
 
-<p>Our vision is to develop a commercial prototype of a Virtualized FPGA, further enhancing hardware acceleration support for internet applications. Considering the distinct system architecture of cloud FPGA instances, as opposed to traditional CPU/GPU-based cloud instances, and the hardware programmability of FPGAs, our focus begins with addressing the security challenges of multi-tenant FPGAs. We explore potential attack models and specific, commonly used attack methods, such as those in AI inference applications, to generate ideas for the design of Cloud FPGA hypervisors.</p>
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/1.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+  </picture>
 
-<h5 id="featured-publications"><strong>Featured publications</strong></h5>
-<ul>
-  <li>Identified potential attacks within FPGA virtualization systems that exploit hardware programming, including but not limited to, attacks like stealing sensitive information through long-wire methods, fault injection via power distribution networks (PDN), side-channel analysis, and the denial-of-service attack.
-    <ul>
-      <li>
-<a href="https://dl.acm.org/doi/abs/10.1145/3491214" rel="external nofollow noopener" target="_blank">FPGAPRO: A Defense Framework Against Crosstalk-Induced Secret Leakage in FPGA</a> (<strong>TODAES</strong>)</li>
-      <li>
-<a href="https://www.usenix.org/system/files/sec21-rakin.pdf" rel="external nofollow noopener" target="_blank">Deep-Dup: An Adversarial Weight Duplication Attack Framework to Crush Deep Neural Network in Multi-Tenant FPGA</a> (<strong>USENIX Security</strong>)</li>
-    </ul>
-  </li>
-  <li>Engineered protective measures to counter the above attacks and incorporate these defenses into the hypervisor of FPGA virtualization systems.
-    <ul>
-      <li>
-<a href="https://ieeexplore.ieee.org/document/9974230?denied=" rel="external nofollow noopener" target="_blank">A Cautionary Note on Building Multi-tenant Cloud-FPGA as a Secure Infrastructure</a> (<strong>FPT</strong>)</li>
-      <li>
-<a href="https://ieeexplore.ieee.org/abstract/document/9256466" rel="external nofollow noopener" target="_blank">A Quantitative Defense Framework against Power Attacks on Multi-tenant FPGA</a> (<strong>ICCAD</strong>)</li>
-    </ul>
-  </li>
-  <li>Developed specific defensive strategies for applications, such as protecting deep neural network (DNN) inference processes from the above attacks.
-    <ul>
-      <li>
-<a href="https://www.computer.org/csdl/proceedings-article/sp/2024/313000a034/1RjEa9WUlPi" rel="external nofollow noopener" target="_blank">DeepShuffle: A Lightweight Defense Framework against Adversarial Fault Injection Attacks on Deep Neural Networks in Multi-Tenant Cloud-FPGA</a> (<strong>S&amp;P</strong>)</li>
-    </ul>
-  </li>
-</ul>
+</figure>
 
-<p><br></p>
-
-<h2 id="hardware-security-">Hardware Security <a name="Hw_sec"></a>
-</h2>
-<p>My main contributions in the field of hardware security are focused on the development of hardware security primitives.</p>
-
-<h5 id="featured-publications-1"><strong>Featured publications</strong></h5>
-<ul>
-  <li>Designed a True Random Number Generator (TRNG) hardware circuit based on Chaotic Cellular Automata Topology.
-    <ul>
-      <li>
-<a href="https://ieeexplore.ieee.org/abstract/document/9185072" rel="external nofollow noopener" target="_blank">A High-Performance and Secure TRNG Based on Chaotic Cellular Automata Topology</a> (<strong>TCAS-I</strong>)</li>
-      <li>The Game of Life in the grids below is a concrete example based on Cellular Automata (CA), starting with a random initial configuration and a series of evolution rules. Please click anywhere in the grids below to begin the evolution and observe the results.
-        <meta charset="UTF-8">
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Conway's Game of Life</title>
-<style>
-    #gameCanvas {
-        width: 100%;
-        height: 100%; /* height is 1/4 of the viewport width */
-        border: 0px solid black;
-    }
-    body, html {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-</style>
-
-
-<canvas id="gameCanvas"></canvas>
-<script>
-    const canvas = document.getElementById('gameCanvas');
-    const ctx = canvas.getContext('2d');
-
-    // Set the canvas dimensions
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetWidth / 8;
-    let running = false; // State to control the evolution
-    const factor = 5
-    // Grid size based on canvas size
-    const cols = Math.floor(canvas.width / factor);
-    const rows = Math.floor(canvas.height / factor);
-    let grid = createGrid(cols, rows);
-
-    function createGrid(cols, rows) {
-        return new Array(cols).fill(null)
-            .map(() => new Array(rows).fill(0));
-    }
-
-    function render() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                const cell = grid[col][row];
-                ctx.beginPath();
-                ctx.rect(col * factor, row * factor, factor, factor);
-                ctx.fillStyle = cell ? 'black' : 'white';
-                ctx.fill();
-                ctx.stroke();
-            }
-        }
-    }
-
-    canvas.addEventListener('click', () => {
-        if (!running) {
-            randomFill();
-            running = true;
-            requestAnimationFrame(update);
-        } else {
-            running = false;
-            grid = createGrid(cols, rows);
-            randomFill();
-            running = true;
-            requestAnimationFrame(update);
-        }
-    });
-
-    function randomFill() {
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                grid[col][row] = Math.floor(Math.random() * 2);
-            }
-        }
-        render();
-    }
-
-    function nextGen() {
-        let newGrid = createGrid(cols, rows);
-        for (let col = 0; col < cols; col++) {
-            for (let row = 0; row < rows; row++) {
-                const cell = grid[col][row];
-                let numNeighbours = 0;
-                for (let i = -1; i < 2; i++) {
-                    for (let j = -1; j < 2; j++) {
-                        if (i === 0 && j === 0) continue;
-                        const x_cell = (col + i + cols) % cols;
-                        const y_cell = (row + j + rows) % rows;
-                        numNeighbours += grid[x_cell][y_cell];
-                    }
-                }
-                if (cell === 1 && numNeighbours < 2 || numNeighbours > 3) newGrid[col][row] = 0;
-                else if (cell === 0 && numNeighbours === 3) newGrid[col][row] = 1;
-                else newGrid[col][row] = cell;
-            }
-        }
-        grid = newGrid;
-    }
-
-    function update() {
-        nextGen();
-        render();
-        if (running) {
-            requestAnimationFrame(update);
-        }
-    }
-
-    // Resize the canvas when the window size changes
-    window.addEventListener('resize', () => {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetWidth / 4;
-        render();
-    });
-
-    // Initialize with a random soup
-    randomFill();
-</script>
-
-<ul>
-  <li>Utilized Physical Unclonable Function to design FPGA-based Trust Enclave.
-    <ul>
-      <li>
-<a href="https://ieeexplore.ieee.org/abstract/document/9586207" rel="external nofollow noopener" target="_blank">SGX-FPGA: Trusted Execution Environment for CPU-FPGA Heterogeneous Architecture</a> (<strong>DAC</strong>)</li>
-    </ul>
-  </li>
-  <li>Developed a defense method for DNN inference against RowHammer attacks.
-    <ul>
-      <li>
-<a href="https://ieeexplore.ieee.org/abstract/document/10247671" rel="external nofollow noopener" target="_blank">HammerDodger: A Lightweight Defense Framework against RowHammer Attack on Deep Neural Networks</a> (<strong>DAC</strong>)</li>
-    </ul>
-  </li>
-</ul>
-
-<p><br></p>
-
-<h2 id="trustworthy-ai-acceleration-and-optimization-">Trustworthy AI Acceleration and Optimization <a name="ai"></a>
-</h2>
-<p>The enactment of stricter privacy laws and the awakening of public awareness towards privacy protection demand higher levels of privacy and security for cloud services, urgently requiring the development of a reliable, secure computing accelerator. This research field aims to apply methods such as <strong>Multipart Computing (MPC)</strong>, <strong>Fully Homomorphic Encryption (FHE)</strong>, and <strong>Trusted Execution Environment (TEE)</strong> (e.g., Intel SGX, ARM TrustZone, AMD SEV) technologies to enable a trustworthy AI accelerator in the cloud, addressing critical privacy and security concerns.</p>
-
-<h5 id="featured-publications-2"><strong>Featured publications</strong></h5>
-<ul>
-  <li>The research is about using quantization methods in 2-party computing-based DNN models.
-    <ul>
-      <li>
-<a href="https://dl.acm.org/doi/10.1145/3613424.3614297" rel="external nofollow noopener" target="_blank">AQ2PNN: Enabling Two-party Privacy-Preserving Deep Neural Network Inference with Adaptive Quantization</a> (<strong>MICRO</strong>)</li>
-    </ul>
-  </li>
-  <li>Reduce multiplication depth and optimize the performance of HE-based GCN inference.
-    <ul>
-      <li>
-<a href="https://openreview.net/pdf?id=5loV5tVzsY" rel="external nofollow noopener" target="_blank">LinGCN: Structural Linearized Graph Convolutional Network for Homomorphically Encrypted Inference</a> (<strong>NeurIPS</strong>)</li>
-    </ul>
-  </li>
-  <li>A DNN architecture and training method specifically designed for TEE.
-    <ul>
-      <li>
-<a href="https://arxiv.org/pdf/2405.03974" rel="external nofollow noopener" target="_blank">TBNet: A Neural Architectural Defense Framework Facilitating DNN Model Protection in Trusted Execution Environments</a> (<strong>DAC</strong>)</li>
-      <li>
-<a href="https://ieeexplore.ieee.org/abstract/document/10323746" rel="external nofollow noopener" target="_blank">MirrorNet: A TEE-Friendly Framework for Secure On-device DNN Inference</a> (<strong>ICCAD</strong>)</li>
-    </ul>
-  </li>
-</ul>
-
-<p><br></p>
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 5</h2>
+          <p class="card-text">a project with a background image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/4_project/">
+      <div class="card hoverable">
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 4</h2>
+          <p class="card-text">another without an image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/6_project/">
+      <div class="card hoverable">
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">project 6</h2>
+          <p class="card-text">a project with no image</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+  </div>
+</div>
 
   </article>
 </div>

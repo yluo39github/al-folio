@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: left
-  image: YK.jpg
+  image: YK.jpeg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Engineering and Science Building (ES) 2329</p>
