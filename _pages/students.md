@@ -1,12 +1,23 @@
 ---
 layout: page
-permalink: /Teaching/
-title: Teaching
+permalink: /Students/
+title: Students
 description: 
 nav: true
-nav_order: 4
+nav_order: 1
 ---
-### Binghamton University
+
+### Ph.D. Students
+
+##### Ziyu Liu (Ph.D. Candidate Spring 2025 -)
+<!-- MS @ NEU\
+BS @ Penn State -->
+
+<!-- ### MS Students
+
+### Undergraduate Students -->
+
+<!-- ### Students
 * Spring 2025 - **EECE 580F/658**: Hardware-Based Security (Instructor)
 * Fall 2024 - **EECE 451/573**: Digital Systems Design II (Instructor)
 
@@ -22,4 +33,4 @@ nav_order: 4
 * Spring 2019 - **ECE 465**: Digital Systems Design (Lecture TA)
 
 ### Illinois Institute of Technology
-* Fall 2017 - **ECE 505**: Applied Optimization for Engineers (Lecture TA)
+* Fall 2017 - **ECE 505**: Applied Optimization for Engineers (Lecture TA) -->

@@ -3,9 +3,9 @@ layout: page
 permalink: /Publications/
 title: Publications
 description:
-years: [2019, 2020, 2021, 2022, 2023, 2024]
+years: [2019, 2020, 2021, 2022, 2023, 2024, 2025]
 nav: true
-nav_order: 1
+nav_order: 2
 ---
 
 <!-- _pages/Publications.md -->
@@ -15,8 +15,18 @@ nav_order: 1
 <!-- </div> -->
 
 <hr>
+**<span style="color:purple;">2025</span>**
+
+[SPECIAL: Synopsis Assisted Secure Collaborative Analytics](https://arxiv.org/pdf/2404.18388)\
+Chenghong Wang, Lina Qiu, Johes Bater, **<ins>Yukui Luo</ins>**
+Very Large Data Bases Conference (**VLDB**), 2025
 
 **<span style="color:purple;">2024</span>**
+
+[Watch Out for the Inherent Vulnerabilities in Developing Multi-tenant Cloud-FPGA: Communication Protocols](https://dl.acm.org/doi/pdf/10.1145/3702324)\
+Ziyu Liu, **<ins>Yukui Luo</ins>**, Yuheng Zhang, Shijin Duan, Xiaolin Xu\
+ACM Transactions on Design Automation of Electronic Systems (**TODAES**), 2024.
+
 
 [AdaPI: Facilitating DNN Model Adaptivity for Efficient Private Inference in Edge Computing](https://arxiv.org/pdf/2407.05633v1)\
 Tong Zhou, Jiahui Zhao, **<ins>Yukui Luo</ins>**, Xi Xie, Wujie Wen, Caiwen Ding and Xiaolin Xu\
