@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-permalink: /projects/
+permalink: /researchs/
 description: My research path began with hardware security primitives and progressed to the system level. FPGA Virtualization is a key aspect of my Ph.D. research. My current research direction will focus more on the contribution of hardware systems to security and privacy. I will continue to explore truly valuable cloud computing systems from hardware, system, and software levels.
 nav: true
 nav_order: 3
